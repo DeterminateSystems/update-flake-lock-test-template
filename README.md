@@ -33,13 +33,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install Nix
-        uses: cachix/install-nix-action@v14
-        with:
-          install_url: https://nixos-nix-install-tests.cachix.org/serve/vij683ly7sl95nnhb67bdjjfabclr85m/install
-          install_options: '--tarball-url-prefix https://nixos-nix-install-tests.cachix.org/serve'
-          extra_nix_config: |
-            experimental-features = nix-command flakes
-            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+        uses: DeterminateSystems/nix-installer-action@v1
       - name: Update flake.lock
         uses: some-name/update-flake-lock@some-branch
 ```
