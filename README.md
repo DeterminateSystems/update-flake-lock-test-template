@@ -8,6 +8,10 @@ https://github.com/DeterminateSystems/update-flake-lock/ action.
 1. Click "Use this template"
 1. Give it a name, and click "Create repository from template"
 1. Modify the `.github/workflows/update.yml` file to point to your fork's `update-flake-lock` repository and branch
+1. Go to "Settings" → "Actions" → "General" → "Workflow permissions"
+   - Select "Read and write permissions"
+   - Enable "Allow GitHub Actions to create and approve pull requests"
+   - Click "Save"
 1. Go to the "Actions" tab and click on "update-flake-lock"
 1. Then click the "Run workflow" dropdown
 1. Finally, click the "Run workflow" button
