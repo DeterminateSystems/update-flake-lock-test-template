@@ -6,10 +6,10 @@ on:
 
 jobs:
   lockfile:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@main
       - name: Enable magic Nix cache
